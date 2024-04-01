@@ -12,6 +12,7 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700');
 
 body{
+	background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8));
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	font-size: 15px;
