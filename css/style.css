@@ -737,17 +737,18 @@ p {
 @media screen and (max-width: 768px) {
 	.carousel-item {
 		height: 60vh;
-		background-position: top;
-		background-size: contain;
 	}
-
 }
 
 @media screen and (max-width: 425px) {
 	.carousel-item {
 		height: 30vh;
 	}
+}
 
+.carousel-item {
+	background-position: top;
+	background-size: contain;
 }
 
 .carousel-caption {
