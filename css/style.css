@@ -661,6 +661,14 @@ body.qualification-on .qualification-section {
 	margin-bottom: 0px;
   }
 
+  @media screen and (max-width: 768px){
+	  .carousel-item {
+		height: 60vh;
+		background-position: top;
+		  background-size: contain;
+	  }
+	
+}
 
 .carousel-caption{
 	height: 18vh; 
