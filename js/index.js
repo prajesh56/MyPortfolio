@@ -99,4 +99,4 @@ updateBodyClass();
 // Add an event listener for window resize
 window.addEventListener('resize', updateBodyClass);
 
-// end of script to handle visibility of about section above 610px
+// end of script to handle visibility of about section above 610pxss
