@@ -1,492 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<link rel="icon" href="./img/profile-pic.png" type="image/x-icon">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Prajesh Shakya</title>
-
-	<!--jQuery-->
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-
-	<!--Bootstrap CSS-->
-	<!-- <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'> -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-		crossorigin="anonymous"></script>
-
-	<link rel="stylesheet" href="css/style.css">
-
-	<!--Fontawesome-->
-	<script src="https://kit.fontawesome.com/dc0f9445e1.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <title>Prajesh | Quality Assurance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans:wght@400;700;900&display=swap" />
+  <link rel="icon" type="image/x-icon" href="/img/profile-pic.png" />
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body class="bg-[#101a23]" style='font-family: Inter, "Noto Sans", sans-serif;'>
+  <!-- =======================
+       Navbar with Hamburger
+  ======================== -->
+  <header class="w-full border-b border-[#223649] px-4 py-3 md:px-10">
+    <div class="flex items-center justify-between">
+      <!-- Logo/Name -->
+      <div class="flex items-center gap-4 text-white">
+        <img src="/img/profile-pic.png" alt="Profile" class="w-8 h-8 rounded-full" />
+        <h2 class="text-lg font-bold">Prajesh Shakya</h2>
+      </div>
+      <!-- Hamburger Button (Mobile only) -->
+      <button id="nav-toggle" class="md:hidden flex items-center px-2 py-2 rounded text-white focus:outline-none focus:ring-2 focus:ring-[#0b80ee]" aria-label="Open main menu">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <!-- NAVIGATION LINKS (Desktop) -->
+      <nav class="hidden md:flex items-center gap-9">
+        <a class="text-white text-sm font-medium hover:text-[#0b80ee]" href="#about">About</a>
+        <a class="text-white text-sm font-medium hover:text-[#0b80ee]" href="#projects">Projects</a>
+        <a class="text-white text-sm font-medium hover:text-[#0b80ee]" href="#experience">Experience</a>
+        <a class="text-white text-sm font-medium hover:text-[#0b80ee]" href="#skills">Skills</a>
+        <a class="text-white text-sm font-medium hover:text-[#0b80ee]" href="#contact">Contact</a>
+      </nav>
+      <!-- Social Buttons (Desktop only) -->
+      <div class="hidden md:flex gap-2 ml-8">
+        <!-- Social icons as before (add your SVGs here) -->
+        <a href="https://wa.link/sg3hrg" target="_blank" class="flex items-center justify-center rounded-full h-10 w-10 bg-[#223649] text-white hover:bg-[#0b80ee]">
+          <!-- WhatsApp SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"></path>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/prajesh-shakya" target="_blank" class="flex items-center justify-center rounded-full h-10 w-10 bg-[#223649] text-white hover:bg-[#0b80ee]" aria-label="LinkedIn">
+  <!-- LinkedIn SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 256 256">
+    <path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
+  </svg>
+</a>
+<a href="mailto:pj.shakya10@gmail.com" 
+   class="flex items-center justify-center rounded-full h-10 w-10 bg-[#223649] text-white hover:bg-[#0b80ee]" 
+   aria-label="Send Email">
+  <!-- Envelope SVG icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+  </svg>
+</a>
 
-<body>
+      </div>
+    </div>
+    <!-- MOBILE NAV MENU -->
+    <nav id="mobile-menu" class="md:hidden hidden flex-col gap-2 mt-3 animate-fade-in">
+      <a class="block text-white text-base font-medium py-2 px-3 rounded hover:bg-[#223649] hover:text-[#0b80ee]" href="#about">About</a>
+      <a class="block text-white text-base font-medium py-2 px-3 rounded hover:bg-[#223649] hover:text-[#0b80ee]" href="#projects">Projects</a>
+      <a class="block text-white text-base font-medium py-2 px-3 rounded hover:bg-[#223649] hover:text-[#0b80ee]" href="#experience">Experience</a>
+      <a class="block text-white text-base font-medium py-2 px-3 rounded hover:bg-[#223649] hover:text-[#0b80ee]" href="#skills">Skills</a>
+      <a class="block text-white text-base font-medium py-2 px-3 rounded hover:bg-[#223649] hover:text-[#0b80ee]" href="#contact">Contact</a>
+      <div class="flex gap-2 mt-2 px-3">
+        <!-- Social icons (repeat as above if you want them on mobile) -->
+      </div>
+    </nav>
+  </header>
 
-	<div class="hero-section">
-		<div class="about-text hover-target">about</div>
-		<div class="contact-text hover-target">contact</div>
-		<div class="main section-center">
-			<div class="container-fluid">
-				<div class="row justify-content-center">
-					<div class="col-12 text-center">
-						<h1>Prajesh Shakya</h1>
-					</div>
-					<div class="col-12 text-center mb-2">
-						<div class="dancing">Quality Assurance</div>
-					</div>
-					<div class="col-lg-8 text-center mt-4">
-						<p>I'm an aspiring website tester with a passion for ensuring digital experiences are seamless,
-							user-friendly, and error-free. In the fast-paced world of the internet, a website's
-							performance can make or break its success. That's where I come in.</p>
-					</div>
-					<div class="col-12 text-center mt-4 mt-lg-5">
-						<p>
-							<span class="experience hover-target">Experience</span>
-							<span class="skill hover-target">Skill</span>
-							<span class="qualification hover-target">Qualification</span>
-						</p>
-					</div>
-				</div>
+  <!-- =======================
+       Main Content
+  ======================== -->
+  <!-- Hero/About Section -->
+<section id="about" class="w-full h-screen">
+<div class="flex flex-col gap-4 md:gap-8 bg-cover bg-center bg-no-repeat rounded-b-xl items-start justify-end px-6 py-12 md:px-20 h-full w-full"
+style='background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url("/img/1.jpg");'>
+
+  <div class="flex flex-col gap-2 text-left max-w-4xl">
+	<h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em]">
+	  Quality Assurance
+	</h1>
+	<h2 class="text-white text-base md:text-xl font-normal leading-normal">
+	  Experienced QA professional with a proven track record of ensuring software quality and reliability. Passionate about delivering exceptional user experiences through rigorous testing and meticulous attention to detail.
+	</h2>
+  </div>
+  <a href="#projects" class="inline-flex items-center justify-center rounded-full h-10 md:h-12 px-5 bg-[#0b80ee] text-white text-base font-bold mt-6">
+	View Projects
+  </a>
+</div>
+</section>
+  <main class="flex-1 flex flex-col items-center px-2 sm:px-6 md:px-10 lg:px-40 py-5">
+
+    
+	<!-- =======================
+		 Projects Section
+	======================== -->
+	<section id="projects" class="w-full max-w-3xl mb-8">
+	  <h2 class="text-white text-xl md:text-2xl font-bold px-2 pb-3">Projects</h2>
+	  <div class="flex flex-col gap-6">
+		<!-- Project 1 -->
+		<div class="flex flex-col md:flex-row items-stretch justify-between gap-4 rounded-xl bg-[#182734] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+		  <div class="flex-[2_2_0px] flex flex-col gap-4">
+			<div class="flex flex-col gap-1">
+			  <p class="text-[#90aecb] text-sm font-normal">Featured Project #1</p>
+			  <p class="text-white text-base font-bold">Imagine Inquiry Sys | School Management Platform</p>
+			  <p class="text-[#90aecb] text-sm font-normal">
+				Led the QA efforts for a modern school management platform, ensuring seamless user experience across various devices and browsers. Implemented, pipelined and conducted various testing, and collaborated with developers to resolve critical issues along with technical debts.
+			  </p>
 			</div>
+			<a href="https://school.techarttrekkies.com" class="inline-flex items-center justify-center rounded-full h-8 px-4 bg-[#223649] text-white text-sm font-medium w-fit">
+			  View Project
+			</a>
 		</div>
-	</div>
-
-	<div class="about-section">
-		<div class="about-close hover-target"></div>
-		<div class="section-center">
-			<div class="container">
-				<div class="row justify-content-center">
-					<!-- <div class="col-12 text-center">
-						<img src="./img/2.jpg" alt="">
-					</div> -->
-					<div class="col-lg-8 text-center mt-4">
-						<p>I'm an aspiring website tester with a passion for ensuring digital experiences are seamless,
-							user-friendly, and error-free. In the fast-paced world of the internet, a website's
-							performance can make or break its success. That's where I come in.</p>
-					</div>
-					<div class="col-12 text-center">
-						<p><span>Prajesh Shakya</span></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="contact-section">
-		<div class="contact-close hover-target"></div>
-		<div class="section-center">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-12 text-center">
-						<a href="mailto:pj.shakya10@gmail.com" class="hover-target">pj.shakya10@gmail.com</a>
-					</div>
-					<div class="col-12 text-center social mt-4">
-						<a href="https://www.linkedin.com/in/prajesh-shakya-026a80205/" class="hover-target"
-							target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-						<a href="https://instagram.com/shakya_pj" class="hover-target" target="_blank"><i
-								class="fa-brands fa-instagram"></i></a>
-						<a href="https://wa.me/9849871430" class="hover-target" target="_blank"><i
-								class="fa-brands fa-whatsapp"></i></a>
-						<a href="https://facebook.com/prajesh.shakya" class="hover-target" target="_blank"><i
-								class="fa-brands fa-facebook"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="skill-section">
-		<div class="skill-close hover-target"></div>
-		<div class="container">
-			<div class="d-flex row justify-content-start">
-				<div class="col-12 text-center mb-3">
-					<h3>Skill</h3>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					HTML <br><meter value="0.9"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					CSS <br><meter value="0.7"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Bootstrap <br><meter value="0.7"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Javascript <br><meter value="0.75"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					PHP <br><meter value="0.7"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Ruby <br><meter value="0.7"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					MySql <br><meter value="0.7"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					PostgreSQL <br><meter value="0.6"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Git <br><meter value="0.8"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Cypress <br><meter value="0.8"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Selenium <br><meter value="0.8"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Jmeter <br><meter value="0.8"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Postman <br><meter value="0.8"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Office Package <br><meter value="0.8"></meter>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Tally <br><meter value="0.7"></meter>
-				</div>
-				<div class="col-12 text-center mt-3">
-					<h3>Trainings</h3>
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Quality Assurance Internship at Techart Trekkies
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Ruby on Rails Bootcamp at Gurzu Nepal
-				</div>
-				<div class="mt-3 col-4 col-sm-4 col-md-3 col-lg-3">
-					Graphics Designing at NIIT institute
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="experience-section">
-		<div class="experience-close hover-target"></div>
-		<div class="container">
-			<!-- <div class="row justify-content-center"> -->
-			<div class="col-12 mb-2 text-center">
-				<h3>Experience</h3>
-			</div>
-
-			<div class="accordion accordion-flush" id="experienceaccordion">
-				<div class="accordion-item">
-					<h2 class="accordion-header">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-							data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-							<div class="col-6 mt-3">
-								<p><span>Quality Assurance Experience</span></p>
-							</div>
-						</button>
-					</h2>
-					<div id="flush-collapseOne" class="accordion-collapse collapse"
-						data-bs-parent="#experienceaccordion">
-						<div class="accordion-body">
-							<div id="carouselexperience" class="carousel slide" data-bs-ride="carousel">
-								<div class="carousel-indicators">
-									<button type="button" data-bs-target="#carouselexperienceIndicators"
-										data-bs-slide-to="0" class="active" aria-current="true"
-										aria-label="Slide 1"></button>
-									<button type="button" data-bs-target="#carouselexperienceIndicators"
-										data-bs-slide-to="1" aria-label="Slide 2"></button>
-									<button type="button" data-bs-target="#carouselexperienceIndicators"
-										data-bs-slide-to="2" aria-label="Slide 3"></button>
-									<button type="button" data-bs-target="#carouselexperienceIndicators"
-										data-bs-slide-to="3" aria-label="Slide 4"></button>
-									<button type="button" data-bs-target="#carouselexperienceIndicators"
-										data-bs-slide-to="4" aria-label="Slide 5"></button>
-									<button type="button" data-bs-target="#carouselexperienceIndicators"
-										data-bs-slide-to="5" aria-label="Slide 6"></button>
-									<button type="button" data-bs-target="#carouselexperienceIndicators"
-										data-bs-slide-to="6" aria-label="Slide 7"></button>
-									<button type="button" data-bs-target="#carouselexperienceIndicators"
-										data-bs-slide-to="7" aria-label="Slide 8"></button>
-									<button type="button" data-bs-target="#carouselexperienceIndicators"
-										data-bs-slide-to="8" aria-label="Slide 9"></button>
-								</div>
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<a href="http://abs.techarttrekkies.com/" target="_blank">
-											<img src="/img/sites/ABS-Consultant-.webp" class="d-block w-100" alt="...">
-											<div class="carousel-caption w-100 d-none d-md-block">
-												<h5>ABS Consultant</h5>
-												<p>Dynamic Website for an accounting business</p>
-											</div>
-										</a>
-									</div>
-									<div class="carousel-item">
-										<a href="https://www.allimpexo.com" target="_blank">
-											<img src="/img/sites/AllImpexo.webp" class="d-block w-100" alt="...">
-											<div class="carousel-caption w-100 d-none d-md-block">
-												<h5>Allimpexo</h5>
-												<p>Static Website for Logistics Product developed by Techart</p>
-											</div>
-										</a>
-									</div>
-									<div class="carousel-item">
-										<a href="https://learning.cehrd.edu.np/" target="_blank">
-											<img src="/img/sites/CEHRD-Learning-Portal.webp" class="d-block w-100"
-												alt="...">
-											<div class="carousel-caption w-100 d-none d-md-block">
-												<h5>CEHRD Learning Portal</h5>
-												<p>Dynamic Website for CEHRD. Educational Portal for CEHRD.</p>
-											</div>
-										</a>
-									</div>
-									<div class="carousel-item">
-										<a href="https://imagineinquirysys.com/" target="_blank">
-											<img src="/img/sites/Imagine-Inquiry-Sys.webp" class="d-block w-100"
-												alt="...">
-											<div class="carousel-caption w-100 d-none d-md-block">
-												<h5>Imagine Inquiry Sys</h5>
-												<p>Dynamic Website for Imagine Inquiry Sys, product for educational
-													sector
-												</p>
-											</div>
-										</a>
-									</div>
-									<div class="carousel-item">
-										<a href="https://www.groupiig.com">
-											<img src="/img/sites/Innovative-Investment-Group.webp" class="d-block w-100"
-												alt="...">
-											<div class="carousel-caption w-100 d-none d-md-block">
-												<h5>Innovative Investment Group</h5>
-												<p>Dynamic Website for Innovative Investment Group</p>
-											</div>
-										</a>
-									</div>
-									<div class="carousel-item">
-										<a href="https://www.joysoftnepal.com" target="_blank">
-											<img src="/img/sites/Joysoft-Riyaz-Traders.webp" class="d-block w-100"
-												alt="...">
-											<div class="carousel-caption w-100 d-none d-md-block">
-												<h5>Riyaz Joysoft Tradersx</h5>
-												<p>Dynamic catalog Website for Joysoft Nepal</p>
-											</div>
-										</a>
-									</div>
-									<div class="carousel-item">
-										<a href="https://www.nassaroverseas.com.np" target="_blank">
-											<img src="/img/sites/Nassar-Overseas-Pvt-Ltd.webp" class="d-block w-100"
-												alt="...">
-											<div class="carousel-caption w-100 d-none d-md-block">
-												<h5>Nassar Overseas Pvt Ltd</h5>
-												<p>Dynamic Website for an overseas business house</p>
-											</div>
-										</a>
-									</div>
-									<div class="carousel-item">
-										<a href="https://www.shtcnepal.com" target="_blank">
-											<img src="/img/sites/SHTC-International-Pvt-Ltd-.webp" class="d-block w-100"
-												alt="...">
-											<div class="carousel-caption w-100 d-none d-md-block">
-												<h5>SHTC International Pvt Ltd</h5>
-												<p>Dynamic Website for SHTC Nepal. An dynamic web application
-													advertising
-													the portfolio
-													of the company</p>
-											</div>
-										</a>
-									</div>
-									<div class="carousel-item">
-										<a href="https://www.ikbhgroup.com.np" target="_blank">
-											<img src="/img/sites/Welcome-To-Belaco.webp" class="d-block w-100"
-												alt="...">
-											<div class="carousel-caption w-100 d-none d-md-block">
-												<h5>Belaco IKBH Group</h5>
-												<p>Ecommerce platform - Dynamic ecommerce product</p>
-											</div>
-										</a>
-									</div>
-								</div>
-								<button class="carousel-control-prev" type="button" data-bs-target="#carouselexperience"
-									data-bs-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Previous</span>
-								</button>
-								<button class="carousel-control-next" type="button" data-bs-target="#carouselexperience"
-									data-bs-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Next</span>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- <div class="accordion-item">
-					<h2 class="accordion-header">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-							data-bs-target="#flush-collapsetwo" aria-expanded="false" aria-controls="flush-collapsetwo">
-							<div class="col-6 mt-3">
-								<p><span>Development Experience</span></p>
-							</div>
-						</button>
-					</h2>
-					<div id="flush-collapsetwo" class="accordion-collapse collapse"
-						data-bs-parent="#experienceaccordion">
-						<div class="accordion-body">
-							<div class="row justify-content-center">
-								<div class="col-md-6 col-lg-4">
-									<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-								</div>
-								<div class="col-md-6 col-lg-4">
-									<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-								</div>
-								<div class="col-md-6 col-lg-4">
-									<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-								</div>
-								<div class="col-md-6 col-lg-4">
-									<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-								</div>
-								<div class="col-md-6 col-lg-4">
-									<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-								</div>
-								<div class="col-md-6 col-lg-4">
-									<img src="http://www.ivang-design.com/svg-load/portfolio/photo-p.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-				<div class="accordion-item">
-					<h2 class="accordion-header">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-							data-bs-target="#flush-collapsethree" aria-expanded="false"
-							aria-controls="flush-collapsethree">
-							<div class="col-6 mt-3">
-								<p><span>Work Experience</span></p>
-							</div>
-						</button>
-					</h2>
-					<div id="flush-collapsethree" class="accordion-collapse collapse"
-						data-bs-parent="#experienceaccordion">
-						<div class="accordion-body">
-							<div class='timeline'>
-								<div class='timeline__content'>
-									<h5>Quality Assurance Manager</h5>
-									<span class='year'>2025</span>
-									<p>Techart trekkies, Kathmandu</p>
-									<p>Present</p>
-								</div>
-								<div class='timeline__content'>
-									<h5>Senior Quality Assurance</h5>
-									<span class='year'>2024</span>
-									<p>Techart trekkies, Kathmandu</p>
-								</div>
-								<div class='timeline__content'>
-									<h5>Junior Quality Analyst</h5>
-									<span class='year'>2023</span>
-									<p>Techart trekkies, Kathmandu</p>
-								</div>
-								<div class='timeline__content'>
-									<h5>Assistant Accountant</h5>
-									<span class='year'>2021</span>
-									<p>Rajendra Shakya & Associates, Lalitpur</p>
-								</div>
-								<div class='timeline__content'>
-									<h5>Data Analyst</h5>
-									<span class='year'>2018</span>
-									<p>Cloudfactory, Kathmandu</p>
-								</div>
-								<div class='timeline__content'>
-									<h5>Marketing Officer</h5>
-									<span class='year'>2017</span>
-									<p>Layeku Saving & Credit Cooperative Society Ltd, Lalitpur</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="accordion-item">
-					<h2 class="accordion-header">
-						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-							data-bs-target="#flush-collapsefour" aria-expanded="false"
-							aria-controls="flush-collapsefour">
-							<div class="col-6 mt-3">
-								<p><span>Volunteering Experience</span></p>
-							</div>
-						</button>
-					</h2>
-					<div id="flush-collapsefour" class="accordion-collapse collapse"
-						data-bs-parent="#experienceaccordion">
-						<div class="accordion-body">
-							<ul>
-								<li>Invigilator and Volunteering at grade XI Enrollment Campaign, Bluebird College</li>
-								<li>Volunteering at Mrs. Newa Contest 2017</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-
+		
+		  <div class="w-full md:w-64 bg-top bg-no-repeat aspect-video bg-cover rounded-xl flex-1 mt-4 md:mt-0"
+     style='background-image: url("/img/sites/Imagine-Inquiry-Sys.webp");'>
+</div>
 
 		</div>
-	</div>
-
-
-	<div class="qualification-section">
-		<div class="qualification-close hover-target"></div>
-		<div class="container">
-			<!-- <div class="row justify-content-center"> -->
-			<div class="col-12 mb-5 text-center">
-				<h3>Qualification</h3>
+		<!-- Project 2 -->
+		<div class="flex flex-col md:flex-row items-stretch justify-between gap-4 rounded-xl bg-[#182734] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+		  <div class="flex-[2_2_0px] flex flex-col gap-4">
+			<div class="flex flex-col gap-1">
+			  <p class="text-[#90aecb] text-sm font-normal">Featured Project #2</p>
+			  <p class="text-white text-base font-bold">Impexo | Complete Logistics Management Solution</p>
+			  <p class="text-[#90aecb] text-sm font-normal">
+				Identified and reported critical bugs, contributing to a significant improvement in app stability and user satisfaction. Conducted comprehensive testing of a mobile application, focusing on usability, functionality, and performance. 
+			  </p>
 			</div>
-			<div class='timeline'>
-				<div class='timeline__content'>
-					<h5>BIM (Bachelor in Information Management)</h5>
-					<span class='year'>2022</span>
-					<p>Shanker Dev Campus</p>
-					<p>Putalisadak, Kathmandu</p>
-				</div>
-				<div class='timeline__content'>
-					<h5>Higher Secondary Education</h5>
-					<span class='year'>2017</span>
-					<p>Bluebird College</p>
-					<p>Kumaripati, Lalitpur</p>
-				</div>
-				<div class='timeline__content'>
-					<h5>SLC (School Leaving Certificate)</h5>
-					<span class='year'>2015</span>
-					<p>Sagarmatha Higher Secondary School</p>
-					<p>Jawalakhel, Lalitpur</p>
-				</div>
-				<div class='timeline__content'>
-				</div>
+			<a href="https://allimpexo.com" class="inline-flex items-center justify-center rounded-full h-8 px-4 bg-[#223649] text-white text-sm font-medium w-fit">
+			  View Project
+			</a>
+		  </div>
+		  <div class="w-full md:w-64 bg-top bg-no-repeat aspect-video bg-cover rounded-xl flex-1 mt-4 md:mt-0"
+     style='background-image: url("/img/sites/AllImpexo.webp");'>
+</div>
+		
+</div>
+<!-- Project 3 -->
+		<div class="flex flex-col md:flex-row items-stretch justify-between gap-4 rounded-xl bg-[#182734] p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+		  <div class="flex-[2_2_0px] flex flex-col gap-4">
+			<div class="flex flex-col gap-1">
+			  <p class="text-[#90aecb] text-sm font-normal">Featured Project #3</p>
+			  <p class="text-white text-base font-bold">SHTC Nepal | Dynamic Website</p>
+			  <p class="text-[#90aecb] text-sm font-normal">
+				Coordinated and analyzed stakeholder requirements, contributing directly to project success. Worked closely with the development team to launch a flawless and user-friendly website.			  </p>
 			</div>
-		</div>
+			<a href="https://shtcnepal.com" target="_blank" class="inline-flex items-center justify-center rounded-full h-8 px-4 bg-[#223649] text-white text-sm font-medium w-fit">
+			  View Project
+			</a>
+		  </div>
+		  <div class="w-full md:w-64 bg-top bg-no-repeat aspect-video bg-cover rounded-xl flex-1 mt-4 md:mt-0"
+     style='background-image: url("/img/sites/SHTC-International-Pvt-Ltd-.webp");'>
+ </div>
+ </div>
+	  </div>
+	</section>
+	<!--counter-->
+<section class="w-full max-w-3xl mb-8">
+  <div class="flex flex-col md:flex-row gap-4">
+    <!-- Static Websites Counter -->
+    <div class="flex-1 flex flex-col items-center justify-center rounded-xl bg-[#182734] p-6 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+      <span class="counter text-4xl md:text-5xl font-black text-white" data-target="5">0</span>
+      <span class="mt-2 text-[#90aecb] text-sm font-medium uppercase tracking-wide">Static Websites</span>
+    </div>
+    <!-- Dynamic Websites Counter -->
+    <div class="flex-1 flex flex-col items-center justify-center rounded-xl bg-[#182734] p-6 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+      <span class="counter text-4xl md:text-5xl font-black text-white" data-target="10">0</span>
+      <span class="mt-2 text-[#90aecb] text-sm font-medium uppercase tracking-wide">Dynamic Websites</span>
+    </div>
+    <!-- Ecommerce Websites Counter -->
+    <div class="flex-1 flex flex-col items-center justify-center rounded-xl bg-[#182734] p-6 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+      <span class="counter text-4xl md:text-5xl font-black text-white" data-target="5">0</span>
+      <span class="mt-2 text-[#90aecb] text-sm font-medium uppercase tracking-wide">Ecommerce Websites</span>
+    </div>
+  </div>
+</section>
+
+
+
+	<!-- =======================
+		 Experience Section
+	======================== -->
+	<section id="experience" class="w-full max-w-3xl mb-8">
+  <h2 class="text-white text-xl md:text-2xl font-bold px-2 pb-3">Experience</h2>
+  <div class="grid grid-cols-1 md:grid-cols-[40px_1fr] gap-x-2 px-2">
+    <!-- Experience Item: Quality Assurance Manager -->
+    <div class="flex flex-row md:flex-col items-center gap-2 md:gap-1 pt-3">
+      <div class="text-white">
+        <!-- Briefcase SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+          <path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path>
+        </svg>
+      </div>
+      <div class="w-[1.5px] bg-[#314d68] h-8 md:h-2 grow"></div>
+    </div>
+    <div class="flex flex-1 flex-col py-3">
+      <p class="text-white text-base font-medium">Quality Assurance Manager</p>
+      <p class="text-[#90aecb] text-base font-normal">2025 – Present<br />Techart Trekkies, Kathmandu</p>
+    </div>
+
+    <!-- Experience Item: Senior Quality Assurance -->
+    <div class="flex flex-row md:flex-col items-center gap-2 md:gap-1">
+      <div class="w-[1.5px] bg-[#314d68] h-8 md:h-2"></div>
+      <div class="text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+          <path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path>
+        </svg>
+      </div>
+      <div class="w-[1.5px] bg-[#314d68] h-8 md:h-2 grow"></div>
+    </div>
+    <div class="flex flex-1 flex-col py-3">
+      <p class="text-white text-base font-medium">Senior Quality Assurance</p>
+      <p class="text-[#90aecb] text-base font-normal">2024<br />Techart Trekkies, Kathmandu</p>
+    </div>
+
+    <!-- Experience Item: Junior Quality Analyst -->
+    <div class="flex flex-row md:flex-col items-center gap-2 md:gap-1">
+      <div class="w-[1.5px] bg-[#314d68] h-8 md:h-2"></div>
+      <div class="text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+          <path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path>
+        </svg>
+      </div>
+      <div class="w-[1.5px] bg-[#314d68] h-8 md:h-2 grow"></div>
+    </div>
+    <div class="flex flex-1 flex-col py-3">
+      <p class="text-white text-base font-medium">Junior Quality Analyst</p>
+      <p class="text-[#90aecb] text-base font-normal">2023<br />Techart Trekkies, Kathmandu</p>
+    </div>
+
+    <!-- Experience Item: Assistant Accountant -->
+    <div class="flex flex-row md:flex-col items-center gap-2 md:gap-1">
+      <div class="w-[1.5px] bg-[#314d68] h-8 md:h-2"></div>
+      <div class="text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+          <path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path>
+        </svg>
+      </div>
+      <div class="w-[1.5px] bg-[#314d68] h-8 md:h-2 grow"></div>
+    </div>
+    <div class="flex flex-1 flex-col py-3">
+      <p class="text-white text-base font-medium">Assistant Accountant</p>
+      <p class="text-[#90aecb] text-base font-normal">2021<br />Rajendra Shakya & Associates, Lalitpur</p>
+    </div>
+
+    <!-- Experience Item: Data Analyst -->
+    <div class="flex flex-row md:flex-col items-center gap-2 md:gap-1">
+      <div class="w-[1.5px] bg-[#314d68] h-8 md:h-2"></div>
+      <div class="text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+          <path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path>
+        </svg>
+      </div>
+      <div class="w-[1.5px] bg-[#314d68] h-8 md:h-2 grow"></div>
+    </div>
+    <div class="flex flex-1 flex-col py-3">
+      <p class="text-white text-base font-medium">Data Analyst</p>
+      <p class="text-[#90aecb] text-base font-normal">2018<br />Cloudfactory, Kathmandu</p>
+    </div>
+
+    <!-- Experience Item: Marketing Officer -->
+    <div class="flex flex-row md:flex-col items-center gap-2 md:gap-1">
+      <div class="w-[1.5px] bg-[#314d68] h-8 md:h-2"></div>
+      <div class="text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+          <path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="flex flex-1 flex-col py-3">
+      <p class="text-white text-base font-medium">Marketing Officer</p>
+      <p class="text-[#90aecb] text-base font-normal">2017<br />Layeku Saving & Credit Cooperative Society Ltd, Lalitpur</p>
+    </div>
+  </div>
+</section>
+
+	<!-- =======================
+		 Skills Section
+	======================== -->
+	<section id="skills" class="w-full max-w-3xl mb-8">
+	  <h2 class="text-white text-xl md:text-2xl font-bold px-2 pb-3">Skills</h2>
+	  <ul class="flex flex-wrap gap-3 px-2">
+		<li class="bg-[#223649] text-white px-4 py-2 rounded-full text-sm">Manual & Automated Testing</li>
+		<li class="bg-[#223649] text-white px-4 py-2 rounded-full text-sm">Test Planning & Execution</li>
+		<li class="bg-[#223649] text-white px-4 py-2 rounded-full text-sm">Selenium, Cypress</li>
+		<li class="bg-[#223649] text-white px-4 py-2 rounded-full text-sm">Performance Testing</li>
+		<li class="bg-[#223649] text-white px-4 py-2 rounded-full text-sm">Agile Methodologies</li>
+		<li class="bg-[#223649] text-white px-4 py-2 rounded-full text-sm">Git</li>
+		<li class="bg-[#223649] text-white px-4 py-2 rounded-full text-sm">HTML, CSS, JavaScript</li>
+		<li class="bg-[#223649] text-white px-4 py-2 rounded-full text-sm">Office Package, Tally</li>
+		<li class="bg-[#223649] text-white px-4 py-2 rounded-full text-sm">Canva, Capcut</li>
+	  </ul>
+	</section>
+	
+	<!-- =======================
+		 Contact Section
+	======================== -->
+	<section id="contact-follow" class="w-full max-w-3xl mb-8 px-2 flex flex-col md:flex-row gap-8">
+  <!-- Contact Section -->
+  <section id="contact" class="flex-1">
+  <h2 class="text-white text-xl md:text-2xl font-bold pb-3">Contact</h2>
+  <div>
+    <p><span class="text-white font-medium">Email:</span> <a href="mailto:pj.shakya10@gmail.com" target="_blank" class="text-[#0b80ee] hover:underline">pj.shakya10@gmail.com</a></p>
+    <p><span class="text-white font-medium">LinkedIn:</span> <a href="https://linkedin.com/in/prajesh-shakya" target="_blank" class="text-[#0b80ee] hover:underline">linkedin.com/in/prajesh-shakya</a></p>
+  </div>
+</section>
+
+
+  <!-- Follow Me Section -->
+  <section id="follow" class="flex-1">
+    <h2 class="text-white text-xl md:text-2xl font-bold pb-3">Follow Me</h2>
+    <div>
+      <a href="https://instagram.com/shakya_pj" target="_blank" aria-label="Instagram" class="inline-block mt-2 rounded-full bg-[#223649] p-2 hover:bg-[#0b80ee]">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24" class="text-white">
+          <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zm8.75 1a1 1 0 110 2 1 1 0 010-2zm-4.25 2.75a4.5 4.5 0 110 9 4.5 4.5 0 010-9zm0 2a2.5 2.5 0 100 5 2.5 2.5 0 000-5z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+</section>
+
+	</main>
 	</div>
-	</div>
 
+<button id="scrollToTopBtn" aria-label="Scroll to top" 
+  class="fixed bottom-6 right-6 hidden p-3 rounded-full bg-[#0b80ee] text-white shadow-lg hover:bg-[#095bb5] focus:outline-none focus:ring-2 focus:ring-[#0b80ee]">
+  <!-- Up arrow SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
 
-
-	</div>
-	</div>
-	</div>
-
-	<div class='cursor' id="cursor"></div>
-	<div class='cursor2' id="cursor2"></div>
-	<div class='cursor3' id="cursor3"></div>
-
-	<!-- Link to page
-================================================== -->
-
-	<!-- 	<a href="" class="link-to-portfolio hover-target" target=”_blank” download>
-		<i class="fa-solid fa-download" title="Download CV"></i>
-
-	</a> -->
-
-
-	<script src="js/index.js"></script>
-
-
-
-
+  <!-- =======================
+       JavaScript
+  ======================== -->
+  <script src="/js/index.js"></script>
 </body>
-
 </html>
+
+
+
